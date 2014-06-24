@@ -565,7 +565,7 @@
   exports.dialog = function(options) {
     options = sanitize(options);
 
-    var dialog = $(templates.dialog);
+    var dialog = (options.customDialog) ? $(options.customDialog) : $(templates.dialog);
     var innerDialog = dialog.find(".modal-dialog");
     var body = dialog.find(".modal-body");
     var buttons = options.buttons;
